@@ -179,6 +179,11 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
+                Text(
+                  'Brahim',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.blue),
+                )
               ],
             )));
   }
