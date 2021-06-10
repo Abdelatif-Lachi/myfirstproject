@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  carousel_pro: ^1.0.0
   flutter:
     sdk: flutter
 
@@ -48,6 +49,10 @@ flutter:
   assets:
    - images/pic_1.jpg
    - images/pic_2.jpg
+   - images/pic_3.png
+   - slider/pic_1.jpg
+   - slider/pic_2.jpg
+   - slider/pic_3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

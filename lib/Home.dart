@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Drawer.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 class Home extends StatefulWidget {
   State<StatefulWidget> createState() {
@@ -12,163 +13,66 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lotfi'),
+        title: Text(
+          'Home Page',
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.greenAccent,
       ),
       body: ListView(
         children: <Widget>[
-          Text(
-            'Vertical',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 40, color: Colors.red),
-          ),
-          Container(
-            height: 240,
-            child: ListView(
-              children: <Widget>[
-                InkWell(
-                    child: Container(
-                        height: 80,
-                        color: Colors.white,
-                        child: Container(
-                          child: Text(
-                            'Text 1',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 30),
-                          ),
-                        ))),
-                Container(
-                    height: 80,
-                    color: Colors.black12,
-                    child: Container(
-                      child: Text(
-                        'Text 2',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30, color: Colors.white),
-                      ),
-                    )),
-                Container(
-                    height: 80,
-                    color: Colors.white,
-                    child: Container(
-                      child: Text(
-                        'Text 3',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    )),
-                Container(
-                    height: 80,
-                    color: Colors.black12,
-                    child: Container(
-                      child: Text(
-                        'Text 4',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30, color: Colors.white),
-                      ),
-                    )),
-                Container(
-                    height: 80,
-                    color: Colors.white,
-                    child: Container(
-                      child: Text(
-                        'Text 5',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    )),
-                Container(
-                    height: 80,
-                    color: Colors.black12,
-                    child: Container(
-                      child: Text(
-                        'Text 6',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30, color: Colors.white),
-                      ),
-                    )),
-                Container(
-                    height: 80,
-                    color: Colors.white,
-                    child: Container(
-                      child: Text(
-                        'Text 7',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    )),
-                Container(
-                    height: 80,
-                    color: Colors.black12,
-                    child: Container(
-                      child: Text(
-                        'Text 8',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30, color: Colors.white),
-                      ),
-                    )),
+          SizedBox(
+            height: 250,
+            width: double.infinity,
+            child: Carousel(
+              dotIncreasedColor: Colors.greenAccent,
+              dotBgColor: Colors.black.withOpacity(0.5),
+              dotSpacing: 15,
+              images: [
+                AssetImage('slider/pic_1.jpg'),
+                AssetImage('slider/pic_2.jpg'),
+                AssetImage('slider/pic_3.jpg'),
               ],
             ),
           ),
-          Text(
-            'Horizontal',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 40, color: Colors.red),
-          ),
           Container(
-            height: 150,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  child: Image.asset('images/pic_1.jpg'),
-                ),
-              ],
+            width: double.infinity,
+            height: 100,
+            child: Image.asset(
+              'images/pic_3.png',
+              fit: BoxFit.fill,
             ),
           ),
-          Text(
-            'Brahim',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.blue),
-          )
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 80, 10, 0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [BoxShadow(color: Colors.black38, blurRadius: 4)]),
+              height: 110,
+              width: double.infinity,
+              child: InkWell(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Colors.blue,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 29),
+                    child: Text('Services',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 35,
+                            letterSpacing: 1.2),
+                        textAlign: TextAlign.center),
+                  ),
+                ),
+                onTap: () {
+                  Navigator.of(context).pushNamed('Services');
+                },
+              ),
+            ),
+          ),
         ],
       ),
       drawer: Drawers(),

@@ -39,7 +39,9 @@ class DrawersState extends State<Drawers> {
                 textAlign: TextAlign.left,
                 style: TextStyle(color: Colors.white),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed('Home');
+              },
               leading: Icon(
                 Icons.home,
                 color: Colors.white,
@@ -59,7 +61,9 @@ class DrawersState extends State<Drawers> {
                 'Learn more about our App',
                 textAlign: TextAlign.left,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed('About');
+              },
               leading: Icon(
                 Icons.info,
                 size: 40,
