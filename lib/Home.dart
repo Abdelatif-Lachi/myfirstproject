@@ -14,7 +14,7 @@ class HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Home Page',
+          'page d`accueil',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
@@ -36,13 +36,18 @@ class HomeState extends State<Home> {
               ],
             ),
           ),
-          Container(
-            width: double.infinity,
-            height: 100,
-            child: Image.asset(
-              'images/pic_3.png',
-              fit: BoxFit.fill,
+          InkWell(
+            child: Container(
+              width: double.infinity,
+              height: 100,
+              child: Image.asset(
+                'images/pic_3.png',
+                fit: BoxFit.fill,
+              ),
             ),
+            onLongPress: () {
+              Navigator.of(context).pushNamed('About');
+            },
           ),
           Padding(
             padding: EdgeInsets.fromLTRB(10, 80, 10, 0),

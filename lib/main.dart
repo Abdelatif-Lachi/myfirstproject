@@ -4,10 +4,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:testapp/About.dart';
+import 'package:testapp/AboutApp.dart';
 import 'Drawer.dart';
 import 'Home.dart';
 import 'About.dart';
 import 'Services.dart';
+import 'AboutApp.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
         },
         'Services': (context) {
           return Services();
+        },
+        'AboutApp': (context) {
+          return AboutApp();
         }
       },
     );

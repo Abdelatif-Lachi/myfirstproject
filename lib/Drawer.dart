@@ -14,11 +14,11 @@ class DrawersState extends State<Drawers> {
         children: <Widget>[
           UserAccountsDrawerHeader(
               accountName: Text(
-                'Welcome !!',
+                'Bienvenu !!',
                 style: TextStyle(color: Colors.black87),
               ),
               accountEmail: Text(
-                'It is a pleasure from you for choosing us ☻',
+                'C`est un plaisir de votre part de nous choisir',
                 style: TextStyle(color: Colors.black87),
               ),
               decoration: BoxDecoration(
@@ -30,12 +30,12 @@ class DrawersState extends State<Drawers> {
             color: Colors.black87.withOpacity(0.7),
             child: ListTile(
               title: Text(
-                'Home',
+                'Accueil',
                 style: TextStyle(color: Colors.white),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
-                'Home Page',
+                'Page d`accueil',
                 textAlign: TextAlign.left,
                 style: TextStyle(color: Colors.white),
               ),
@@ -53,12 +53,12 @@ class DrawersState extends State<Drawers> {
             height: 70,
             child: ListTile(
               title: Text(
-                'About',
+                'À propos de nous',
                 style: TextStyle(color: Colors.black87),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
-                'Learn more about our App',
+                'En savoir plus sur qui a développé l`application',
                 textAlign: TextAlign.left,
               ),
               onTap: () {
@@ -75,18 +75,20 @@ class DrawersState extends State<Drawers> {
             color: Colors.black87.withOpacity(0.7),
             child: ListTile(
               title: Text(
-                'Premium',
+                'À propos de l`application',
                 style: TextStyle(color: Colors.white),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
-                'Get the VIP Pass',
+                'En savoir plus sur notre application',
                 textAlign: TextAlign.left,
                 style: TextStyle(color: Colors.white),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed('AboutApp');
+              },
               leading: Icon(
-                Icons.star,
+                Icons.info_outline,
                 color: Colors.white,
                 size: 40,
               ),

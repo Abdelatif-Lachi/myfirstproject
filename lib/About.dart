@@ -58,9 +58,10 @@ class _AboutUsState extends State<AboutUs> {
         appBar: AppBar(
           backgroundColor: Colors.greenAccent,
           title: Text(
-            'About Us',
+            'À propos de nous',
             style: TextStyle(color: Colors.black),
           ),
+          centerTitle: true,
         ),
         body: ListView(
           children: [

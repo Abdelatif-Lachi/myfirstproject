@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Drawer.dart';
 
 class Services extends StatefulWidget {
   const Services({Key? key}) : super(key: key);
@@ -12,8 +13,19 @@ class _ServicesState extends State<Services> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Services'),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('Home');
+            },
+            icon: Icon(Icons.arrow_back)),
+        backgroundColor: Colors.greenAccent,
+        title: Text(
+          'Services',
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
       ),
+      endDrawer: Drawers(),
     );
   }
 }
