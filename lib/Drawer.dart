@@ -15,11 +15,11 @@ class DrawersState extends State<Drawers> {
           UserAccountsDrawerHeader(
               accountName: Text(
                 'Bienvenu !!',
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 18),
               ),
               accountEmail: Text(
                 'C`est un plaisir de votre part de nous choisir',
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 18),
               ),
               decoration: BoxDecoration(
                   image: DecorationImage(
@@ -31,7 +31,7 @@ class DrawersState extends State<Drawers> {
             child: ListTile(
               title: Text(
                 'Accueil',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 18),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
@@ -54,7 +54,7 @@ class DrawersState extends State<Drawers> {
             child: ListTile(
               title: Text(
                 'À propos de nous',
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 18),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
@@ -76,7 +76,7 @@ class DrawersState extends State<Drawers> {
             child: ListTile(
               title: Text(
                 'À propos de l`application',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 18),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
@@ -98,12 +98,12 @@ class DrawersState extends State<Drawers> {
             height: 70,
             child: ListTile(
               title: Text(
-                'Types',
-                style: TextStyle(color: Colors.black87),
+                'Remrciment',
+                style: TextStyle(color: Colors.black87, fontSize: 18),
                 textAlign: TextAlign.left,
               ),
               subtitle: Text(
-                'Types of services offered',
+                'Merci de croire en nous !!!',
                 textAlign: TextAlign.left,
               ),
               onTap: () {},

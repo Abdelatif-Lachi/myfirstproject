@@ -15,7 +15,7 @@ class HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(
           'page d`accueil',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontSize: 28),
         ),
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
@@ -30,9 +30,9 @@ class HomeState extends State<Home> {
               dotBgColor: Colors.black.withOpacity(0.5),
               dotSpacing: 15,
               images: [
-                AssetImage('slider/pic_1.jpg'),
-                AssetImage('slider/pic_2.jpg'),
                 AssetImage('slider/pic_3.jpg'),
+                AssetImage('images/pub.jpg'),
+                AssetImage('images/pub.jpg'),
               ],
             ),
           ),
@@ -63,11 +63,11 @@ class HomeState extends State<Home> {
                       borderRadius: BorderRadius.circular(15)),
                   color: Colors.blue,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 29),
+                    padding: EdgeInsets.only(top: 25),
                     child: Text('Services',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 35,
+                            fontSize: 40,
                             letterSpacing: 1.2),
                         textAlign: TextAlign.center),
                   ),

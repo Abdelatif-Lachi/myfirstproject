@@ -16,7 +16,7 @@ class _AboutAppState extends State<AboutApp> {
         backgroundColor: Colors.greenAccent,
         title: Text(
           'À propos de l`application',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontSize: 28),
         ),
         centerTitle: true,
       ),
@@ -40,7 +40,7 @@ class _AboutAppState extends State<AboutApp> {
             width: double.infinity,
             child: Text(
               'Cette application est un guide qui sert à aider la société à avoir chaque mise à jour sur les services contenus dans chaque hôpital en fournissant toutes les données qui ont un rapport avec leurs besoins pour faciliter leur vie quotidienne.',
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 20),
             ),
           ),
         ),
@@ -63,7 +63,7 @@ class _AboutAppState extends State<AboutApp> {
             width: double.infinity,
             child: Text(
               'À une époque où la technologie est presque entre les mains de toute la population et où pratiquement la majorité de la société a des téléphones intelligents connectés à Internet et malheureusement les maladies sont partout surtout en cette période épidémique de Corona Virus (COVID - 19) nous avons trouvé un moyen de profiter de ces privilèges (technologie) pour réduire la possibilité d`attraper une infection par le virus corona.',
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 22),
             ),
           ),
         ),

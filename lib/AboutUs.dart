@@ -6,26 +6,21 @@ class AboutUs extends StatefulWidget {
   _AboutUsState createState() => _AboutUsState();
 }
 
-Widget buildText3(BuildContext context) => ExpansionTile(
-      title: Container(
-        child: Text(
-          'Tari Nasser',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18, color: Colors.blue),
-        ),
-      ),
-      children: [Text('Student 4')],
-    );
-
 Widget buildText2(BuildContext context) => ExpansionTile(
       title: Container(
         child: Text(
           'Mebarki Ibrahim',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18, color: Colors.blue),
+          style: TextStyle(fontSize: 20, color: Colors.blue),
         ),
       ),
-      children: [Text('Student 1')],
+      children: [
+        Text(
+          'Mebarki Ibrahim etudiant L3 Genie Industrielle option Automatiqe 22 Ans expirience en informatique et programmation',
+          style: TextStyle(fontSize: 18),
+          textAlign: TextAlign.center,
+        )
+      ],
     );
 
 Widget buildText1(BuildContext context) => ExpansionTile(
@@ -33,7 +28,7 @@ Widget buildText1(BuildContext context) => ExpansionTile(
         child: Text(
           'Laassis Seif Ellislam',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18, color: Colors.blue),
+          style: TextStyle(fontSize: 20, color: Colors.blue),
         ),
       ),
       children: [Text('Student 2')],
@@ -44,10 +39,16 @@ Widget buildText(BuildContext context) => ExpansionTile(
         child: Text(
           'Lachi Abdelatif',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18, color: Colors.blue),
+          style: TextStyle(fontSize: 20, color: Colors.blue),
         ),
       ),
-      children: [Text('Student 3')],
+      children: [
+        Text(
+          'Abdelatif lachi étudiant de L3 Génie Industiel option automatique a des expirience en Flutter et Dart , amateur desiner et photographer et deplomé en électricité industrielle et électronique ',
+          style: TextStyle(fontSize: 18),
+          textAlign: TextAlign.center,
+        )
+      ],
     );
 
 class _AboutUsState extends State<AboutUs> {
@@ -59,7 +60,7 @@ class _AboutUsState extends State<AboutUs> {
           backgroundColor: Colors.greenAccent,
           title: Text(
             'À propos de nous',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: 28),
           ),
           centerTitle: true,
         ),
@@ -139,32 +140,7 @@ class _AboutUsState extends State<AboutUs> {
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(color: Colors.grey, width: 1.5),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'slider/pic_1.jpg',
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                        ),
-                        buildText3(context)
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            )
           ],
         ));
   }

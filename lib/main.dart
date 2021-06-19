@@ -3,11 +3,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:testapp/About.dart';
+import 'package:testapp/AboutUs.dart';
 import 'package:testapp/AboutApp.dart';
 import 'Drawer.dart';
 import 'Home.dart';
-import 'About.dart';
+import 'AboutUs.dart';
 import 'Services.dart';
 import 'AboutApp.dart';
 
@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: ('Learn app'),
+      theme: ThemeData(fontFamily: 'Teko'),
       home: Home(),
       routes: {
         'About': (context) {
